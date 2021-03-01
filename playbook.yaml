@@ -1,6 +1,8 @@
 ---
 - hosts: localhost
   gather_facts: false
+  environment:
+     K8S_AUTH_KUBECONFIG:"~/.kube/config"
     # Create Kubernetes resources to run flask app.
   tasks:    
   - name: Create a Deployment for flask app
