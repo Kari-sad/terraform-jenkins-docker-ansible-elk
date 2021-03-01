@@ -35,6 +35,12 @@ pipeline {
 					}
 				}
 			}
+			stage('terraform init'){
+				steps{
+					script{
+						sh 'terraform init'
+					}
+				}
 			stage('Deploy to kubernetes'){
 				steps{
 					sh 'terraform apply -auto-approve'
