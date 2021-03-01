@@ -7,7 +7,6 @@
   tasks:    
   - name: Deploy my app secrets.
     k8s:
-      definition: '{{ item }}'
       kubeconfig: '~/.kube/config'
       state: present
   - name: Create a Deployment for flask app
