@@ -34,7 +34,7 @@ pipeline {
 			}
 			stage('Deploy to kubernetes'){
 				steps{
-					#script
+					/*script
 				}
 			}
 		}
