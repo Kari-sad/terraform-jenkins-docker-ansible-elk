@@ -35,16 +35,9 @@ pipeline {
 					}
 				}
 			}
-			stage('terraform init'){
-				steps{
-					script{
-						sh 'terraform init'
-					}
-				}
-			}	
 			stage('Deploy to kubernetes'){
 				steps{
-					sh 'terraform apply -auto-approve'
+					ansiblePlaybook credentialsId: 'Ansible_ssh', disableHostKeyChecking: true, installation: 'Ansible', playbook: 'playbook.yaml'
 				}
 			}
 		}
