@@ -2,7 +2,7 @@
 - hosts: all
     # Create Kubernetes resources to run flask app.
   tasks:    
-  - name: name: Create a Deployment for flask app
+  - name: Create a Deployment for flask app
     k8s:
       state: present
       definition:
