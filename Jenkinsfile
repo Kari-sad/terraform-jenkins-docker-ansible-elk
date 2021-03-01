@@ -11,6 +11,7 @@ pipeline {
 				steps {
 					checkout scm
 				}
+			}	
 			stage('Building new image ') {
 				steps {
 					script {
