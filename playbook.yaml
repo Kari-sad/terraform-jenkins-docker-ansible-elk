@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: localhost
     # Create Kubernetes resources to run flask app.
   tasks:    
   - name: Create a Deployment for flask app
