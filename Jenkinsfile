@@ -37,7 +37,7 @@ pipeline {
 			}
 			stage('Deploy to kubernetes using ansible'){
 					steps{
-  						ansiblePlaybook(playbook: 'playbook.yml')
+  						ansiblePlaybook(playbook: 'playbook.yaml')
 					}
 				}
 		}
