@@ -35,11 +35,11 @@ pipeline {
 					}
 				}
 			}
-			stage('Deploy to kubernetes using ansible'){
-					steps{
-  						ansiblePlaybook credentialsId: 'Ansible_ssh', disableHostKeyChecking: true, installation: 'Ansible', playbook: 'playbook.yaml'
-					}
+			stage('Deploy to kubernetes'){
+				steps{
+					sh 'terraform apply -auto-approve'
 				}
+			}
 		}
 	}
 
