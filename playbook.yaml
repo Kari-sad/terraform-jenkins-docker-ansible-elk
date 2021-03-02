@@ -1,15 +1,11 @@
+---
 - hosts: localhost
   tasks:
-    - name: Create a k8s namespace
-      community.kubernetes.k8s:  
-        name: flask
-        api_version: v1
-        kind: Namespace
-        state: present
-
-# Passing the object definition from a file
-
-    - name: Create a Deployment and service by reading the definition from a local file
-      community.kubernetes.k8s:
-        state: present
-        src: ./kubernetes.yaml
+    - name: use cluster
+      command: kubectl cluster-info --context kind-app 
+      become: True
+      become_user: sysadmin
+    - name: run kubernetes.yaml to deploy flask app and create a service
+      command: kubectl apply -f kubernetes.yaml
+      become: True
+      become_user: sysadmin
