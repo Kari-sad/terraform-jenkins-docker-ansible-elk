@@ -1,6 +1,6 @@
 ---
 - hosts: localhost
-  gather_facts: false
+  become-user: sysadmin
   tasks: 
   - name: print working directory
     shell: pwd 
