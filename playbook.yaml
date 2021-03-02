@@ -1,8 +1,7 @@
 - hosts: localhost
-  user: sysadmin
   tasks:
     - name: Create a k8s namespace
-      community.kubernetes.k8s:
+      community.kubernetes.k8s:  
         name: flask
         api_version: v1
         kind: Namespace
