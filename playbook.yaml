@@ -2,8 +2,5 @@
 - hosts: localhost
   user: sysadmin
   tasks: 
-    - name: kubectl get secrets
-      shell: kubectl get secrets secret-demo 
-      register: kube_secrets
     - name: run kubernetes.yaml to deploy flask app and create a service
       command: kubectl apply -f kubernetes.yaml
