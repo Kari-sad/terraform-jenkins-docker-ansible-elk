@@ -1,8 +1,5 @@
----
-- hosts: localhost
-  become-user: sysadmin
-  tasks: 
-  - name: print working directory
-    shell: pwd 
-  - name: run kubernetes.yaml to deploy flask app and create a service
+ hosts: localhost
+ become-user: sysadmin
+ tasks: 
+   - name: run kubernetes.yaml to deploy flask app and create a service
     shell: kubectl apply -f kubernetes.yaml
