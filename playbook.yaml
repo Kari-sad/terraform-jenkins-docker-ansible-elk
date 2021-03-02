@@ -1,6 +1,8 @@
 ---
 - hosts: localhost
   gather_facts: false
-  tasks:    
+  tasks: 
+  - name: print working directory
+    shell: pwd 
   - name: run kubernetes.yaml to deploy flask app and create a service
-    shell: kubectl cluster-info --context kind-app
+    shell: kubectl apply -f kubernetes.yaml
