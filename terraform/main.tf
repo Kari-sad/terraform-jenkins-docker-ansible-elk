@@ -12,6 +12,6 @@ provider "kind" {}
 
 # Create a cluster
 resource "kind_cluster" "default" {
-    name = "app"
+    name = "app-cluster"
 	node_image = "kindest/node:v1.16.1"
 }
