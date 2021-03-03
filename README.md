@@ -156,8 +156,8 @@ I used the dockerized ELK stack installation from [https://github.com/deviantony
 
 **Used metrics**  
 
-- System metric: to monitor my VM local system metrics like CPU/memory/disk usage and network utilization 
+- **System metric:** to monitor my VM local system metrics like CPU/memory/disk usage and network utilization 
 
-- Docker metric: to monitor docker containers present in our vm and also the kubernetes control plane. Default metricsets are cpu, diskio, healthcheck, info, memory, and network.
+- **Docker metric:** to monitor docker containers present in our vm and also the kubernetes control plane. Default metricsets are cpu, diskio, healthcheck, info, memory, and network.
  
-- kubernetes metric:to monitor kubernetes cluster nodes,pods , containers ...---> didn't get it to work
+- **kubernetes metric:** to monitor kubernetes cluster nodes,pods , containers ...---> didn't get it to work
