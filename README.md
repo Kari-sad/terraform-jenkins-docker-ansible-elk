@@ -134,10 +134,10 @@ We will be using terraform to provision a KIND (Kubernetes IN Docker) cluster in
 create a jenkins pipeline using the jenkinsfile in this repository.  
 **Jenkins pipeline stages:**  
 
-1. Pull the git repository
-1. Build an image foe the included flask app  
-1. Push the created image to dockerhub  
-1. Play an ansible playbook (playbook.yaml) that will apply kubernetes.yaml. This later will deploy 3 replicats of the flask app to a kubernetes cluster and run a service.  
+1. Pull the git repository  
+2. Deploy the app to kubernetes by running an ansible playbook (playbook.yaml) that will apply a kubernetes.yaml.   
+Kubernetes.yaml will deploy 3 replicas of the flask app ( image pulled from Dockerhub) to     a    kubernetes cluster and run a service
+ 
  
 
 ## Monitoring using ELK Stack  ##
